@@ -1,0 +1,150 @@
+<!-- Create body -->
+<body>
+    <!-- Create header -->
+    <header>
+        <!-- import style.css -->
+        <link rel="stylesheet" href="style.css">
+        
+    </header>
+    <!-- Create main -->
+    <main>
+        <div>
+            <h1 style="text-align:center">This is round <a style="color:brown">4</a></h1>
+            <h2>We are looking for: <a style="color:brown">one row</style> </h2>
+        </div>5
+        <!-- add black backround with a purple vanishing gradient -->
+        <div class="background"  style="margin-top:auto; vertical-align: center;">
+            <div class="box">
+                <!-- repeat this 100 times <div class="ball">1</div>  -->
+                <div class="ball">1</div>
+                <div class="ball">2</div>
+                <div class="ball">3</div>
+                <div class="ball">4</div>
+                <div class="ball">5</div>
+                <div class="ball">6</div>
+                <div class="ball">7</div>
+                <div class="ball">8</div>
+                <div class="ball">9</div>
+                
+                <div class="ball">10</div>
+                <div class="ball">11</div>
+                <div class="ball">12</div>
+                <div class="ball">13</div>
+                <div class="ball">14</div>
+                <div class="ball">15</div>
+                <div class="ball">16</div>
+                <div class="ball">17</div>
+                <div class="ball">18</div>
+                <div class="ball">19</div>
+
+                <div class="ball">20</div>
+                <div class="ball">21</div>
+                <div class="ball">22</div>
+                <div class="ball">23</div>
+                <div class="ball">24</div>
+                <div class="ball">25</div>
+                <div class="ball">26</div>
+                <div class="ball">27</div>
+                <div class="ball">28</div>
+                <div class="ball">29</div>
+
+                <div class="ball">30</div>
+                <div class="ball">31</div>
+                <div class="ball">32</div>
+                <div class="ball">33</div>
+                <div class="ball">34</div>
+                <div class="ball">35</div>
+                <div class="ball">36</div>
+                <div class="ball">37</div>
+                <div class="ball">38</div>
+                <div class="ball">39</div>
+                
+                <div class="ball">40</div>
+                <div class="ball">41</div>
+                <div class="ball">42</div>
+                <div class="ball">43</div>
+                <div class="ball">44</div>
+                <div class="ball">45</div>
+                <div class="ball">46</div>
+                <div class="ball">47</div>
+                <div class="ball">48</div>
+                <div class="ball">49</div>
+                
+                <div class="ball">50</div>
+                <div class="ball">51</div>
+                <div class="ball">52</div>
+                <div class="ball">53</div>
+                <div class="ball">54</div>
+                <div class="ball">55</div>
+                <div class="ball">56</div>
+                <div class="ball">57</div>
+                <div class="ball">58</div>
+                <div class="ball">59</div>
+                
+                <div class="ball">60</div>
+                <div class="ball">61</div>
+                <div class="ball">62</div>
+                <div class="ball">63</div>
+                <div class="ball">64</div>
+                <div class="ball">65</div>
+                <div class="ball">66</div>
+                <div class="ball">67</div>
+                <div class="ball">68</div>
+                <div class="ball">69</div>
+                
+                <div class="ball">70</div>
+                <div class="ball">71</div>
+                <div class="ball">72</div>
+                <div class="ball">73</div>
+                <div class="ball">74</div>
+                <div class="ball">75</div>
+                <div class="ball">76</div>
+                <div class="ball">77</div>
+                <div class="ball">78</div>
+                <div class="ball">79</div>
+                
+                <div class="ball">80</div>
+                <div class="ball">81</div>
+                <div class="ball">82</div>
+                <div class="ball">83</div>
+                <div class="ball">84</div>
+                <div class="ball">85</div>
+                <div class="ball">86</div>
+                <div class="ball">87</div>
+                <div class="ball">88</div>
+                <div class="ball">89</div>
+
+                <div class="ball">90</div>
+            </div>
+        </div>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script>
+            $(document).ready(function(e) {
+                var refresher = setInterval("update_content();",1000); // 1 seconds
+            })
+            
+            window.onload() = function() {
+                update_content();
+            }
+
+            function update_content(){
+
+                // get the data from balls.json and put it in the variable data
+                $.getJSON("balls.json", function(data) {
+                    // for each ball in the data
+                    $.each(data, function(i, ball) {
+                        // iterate over data and create an array
+                        
+                        for(var i=0; i<90; i++){
+                            document.getElementsByClassName("ball")[i].classList.remove("active");
+                        }
+                        for(var i=0; i<data.length; i++){
+                            document.getElementsByClassName("ball")[data[i]-1].classList.add("active");
+                        }
+                    });
+                });
+            }
+        </script>
+    </main>
+    </body>
+    </html>

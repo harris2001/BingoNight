@@ -1,0 +1,208 @@
+/* make backround black with a vanishing purple gradient */
+body {
+    background: #000000;
+    background: -moz-linear-gradient(top, #000000 0%, #000000 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#000000), color-stop(100%,#000000));
+    background: -webkit-linear-gradient(top, #000000 0%,#000000 100%);
+    background: -o-linear-gradient(top, #000000 0%,#000000 100%);
+    background: -ms-linear-gradient(top, #000000 0%,#000000 100%);
+    background: linear-gradient(to bottom, #000000 0%,#000000 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#000000',GradientType=0 );
+}
+.box {
+    background-color: lightgrey;
+    color: #fff;
+    border-radius: 5px;
+    padding: 20px;
+    font-size: 150%;
+  }
+  
+  .wrapper {
+    width: 600px;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(2, 100px);
+    grid-template-rows: 100px 100px 100px;
+    grid-auto-flow: column;
+  }
+.align-self-center{
+    align-self: center;
+    text-align: center;
+}
+.title{
+    margin-top: 80px;
+    margin-bottom: 50px;
+    font-size: 50px;
+}
+.bottom{
+    margin-top: 5%;
+    margin-bottom: 5%;
+    font-size: 30px;
+}
+
+*{
+    color:white;
+}
+
+.box {
+
+	display: grid;
+
+	/* Create 5 columns, each 1 "fractional unit" wide */
+	grid-template-columns: repeat(10, 1fr);
+
+	/* Create 5 rows, each 1 "fractional unit" high */
+	grid-template-rows: repeat(9, 1fr);
+
+	/* Add a 10px gap between columns and rows */
+	grid-gap: 10px;
+
+}
+
+.ball {
+    background-color: rgba(229, 229, 229, 0.5);
+    border: 1px solid rgba(128, 128, 128, 0.5);
+    padding: 0.25em;
+    font-size: 180%;
+    display: block;
+    position: relative;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: -webkit-radial-gradient(25px 25px, circle, gray, #000);
+    background: -moz-radial-gradient(25px 25px, circle, gray, #000);
+    background: radial-gradient(25px 25px, circle, gray, #000);
+    text-align: center;
+    display: inline-block;
+}
+
+/* on ball active */
+.ball.active {
+    background: -webkit-radial-gradient(25px 25px, circle, red, #000);
+    background: -moz-radial-gradient(25px 25px, circle, red, #000);
+    background: radial-gradient(25px 25px, circle, red, #000);
+}
+
+.logo {
+    height: 40vh;
+    
+}
+
+/* CSS */
+.button-78 {
+  align-items: center;
+  appearance: none;
+  background-clip: padding-box;
+  background-color: initial;
+  background-image: none;
+  border-style: none;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  flex-direction: row;
+  flex-shrink: 0;
+  font-family: Eina01,sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+  justify-content: center;
+  line-height: 24px;
+  margin: 0;
+  min-height: 64px;
+  outline: none;
+  overflow: visible;
+  padding: 19px 26px;
+  pointer-events: auto;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  text-transform: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+  width: auto;
+  word-break: keep-all;
+  z-index: 0;
+}
+
+@media (min-width: 768px) {
+  .button-78 {
+    padding: 19px 32px;
+  }
+}
+
+.button-78:before,
+.button-78:after {
+  border-radius: 80px;
+}
+
+.button-78:before {
+  background-image: linear-gradient(92.83deg, #ff7426 0, #f93a13 100%);
+  content: "";
+  display: block;
+  height: 100%;
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: -2;
+}
+
+.button-78:after {
+  background-color: initial;
+  background-image: linear-gradient(#541a0f 0, #0c0d0d 100%);
+  bottom: 4px;
+  content: "";
+  display: block;
+  left: 4px;
+  overflow: hidden;
+  position: absolute;
+  right: 4px;
+  top: 4px;
+  transition: all 100ms ease-out;
+  z-index: -1;
+}
+.button-78 {
+    width: 30%;
+    height: 80px;
+    font-size: 30px;
+    background-color: black;
+    border-radius: 10px;
+    display: inline-block;
+}
+.button-78:hover:not(:disabled):before {
+  background: linear-gradient(92.83deg, rgb(255, 116, 38) 0%, rgb(249, 58, 19) 100%);
+}
+
+.button-78:hover:not(:disabled):after {
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  transition-timing-function: ease-in;
+  opacity: 0;
+  background-color: black;
+}
+
+.button-78:active:not(:disabled) {
+  color: black;
+}
+
+.button-78:active:not(:disabled):before {
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, .2), rgba(0, 0, 0, .2)), linear-gradient(92.83deg, #ff7426 0, #f93a13 100%);
+}
+
+.button-78:active:not(:disabled):after {
+  background-image: linear-gradient(#541a0f 0, #0c0d0d 100%);
+  bottom: 4px;
+  left: 4px;
+  right: 4px;
+  top: 4px;
+}
+
+.button-78:disabled {
+  cursor: default;
+  opacity: .24;
+}
